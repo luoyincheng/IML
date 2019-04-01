@@ -13,16 +13,9 @@ import operator
 
 """
 函数说明：创建数据集
-
-Parameters:
-    None
-
 Returns:
     group - 数据集
     labels - 分类标签
-
-Modify:
-    2018-07-13
 """
 def createDataSet():
     # 四组二维特征
@@ -33,8 +26,6 @@ def createDataSet():
 
 
 """
-函数说明：kNN算法，分类器爱情片
-
 Parameters:
     inX - 用于分类的数据（测试集）
     dataSet - 用于训练的数据（训练集）（n*1维列向量）
@@ -43,15 +34,12 @@ Parameters:
 
 Returns:
     sortedClassCount[0][0] - 分类结果
-
-Modify:
-    2018-07-13
 """
-def classify0(inX, dataSet, labels, k):
+def classify0(inX, knownDataSet, knownLabels, k):
     # numpy函数shape[0]返回dataSet的行数
-    dataSetSize = dataSet.shape[0]
-    # 将inX重复dataSetSize次并排成一列
-    diffMat = np.tile(inX, (dataSetSize, 1)) - dataSet
+    dataSetSize = knownDataSet.shape[0]
+    # 将inX纵向重复dataSetSize次,横向重复一次
+    diffMat = np.tile(inX, (dataSetSize, 1)) - knownDataSet
     # 二维特征相减后平方（用diffMat的转置乘diffMat）
     sqDiffMat = diffMat**2
     # sum()所有元素相加，sum(0)列相加，sum(1)行相加
@@ -65,7 +53,7 @@ def classify0(inX, dataSet, labels, k):
     # 选择距离最小的k个点
     for i in range(k):
         # 取出前k个元素的类别
-        voteIlabel = labels[sortedDistIndicies[i]]
+        voteIlabel = knownLabels[sortedDistIndicies[i]]
         # 字典的get()方法，返回指定键的值，如果值不在字典中返回0
         # 计算类别次数
         classCount[voteIlabel] = classCount.get(voteIlabel, 0) + 1
@@ -92,37 +80,37 @@ def classify0(inX, dataSet, labels, k):
 # Modify:
 #     2018-07-13
 # """
-# def file2matrix(filename):
-#     # 打开文件
-#     fr = open(filename)
-#     # 读取文件所有内容
-#     arrayOlines = fr.readlines()
-#     # 得到文件行数
-#     numberOfLines = len(arrayOlines)
-#     # 返回的NumPy矩阵numberOfLines行，3列
-#     returnMat = np.zeros((numberOfLines, 3))
-#     # 创建分类标签向量
-#     classLabelVector = []
-#     # 行的索引值
-#     index = 0
-#     # 读取每一行
-#     for line in arrayOlines:
-#         # 去掉每一行首尾的空白符，例如'\n','\r','\t',' '
-#         line = line.strip()
-#         # 将每一行内容根据'\t'符进行切片,本例中一共有4列
-#         listFromLine = line.split('\t')
-#         # 将数据的前3列进行提取保存在returnMat矩阵中，也就是特征矩阵
-#         returnMat[index,:] = listFromLine[0:3]
-#         # 根据文本内容进行分类1：不喜欢；2：一般；3：喜欢
-#         if listFromLine[-1] == 'didntLike':
-#             classLabelVector.append(1)
-#         elif listFromLine[-1] == 'smallDoses':
-#             classLabelVector.append(2)
-#         elif listFromLine[-1] == 'largeDoses':
-#             classLabelVector.append(3)
-#         index += 1
-#     # 返回标签列向量以及特征矩阵
-#     return returnMat, classLabelVector
+def file2matrix(filename):
+    # 打开文件
+    fr = open(filename)
+    # 读取文件所有内容
+    arrayOlines = fr.readlines()
+    # 得到文件行数
+    numberOfLines = len(arrayOlines)
+    # 返回的NumPy矩阵numberOfLines行，3列
+    returnMat = np.zeros((numberOfLines, 3))
+    # 创建分类标签向量
+    classLabelVector = []
+    # 行的索引值
+    index = 0
+    # 读取每一行
+    for line in arrayOlines:
+        # 去掉每一行首尾的空白符，例如'\n','\r','\t',' '
+        line = line.strip()
+        # 将每一行内容根据'\t'符进行切片,本例中一共有4列
+        listFromLine = line.split('\t')
+        # 将数据的前3列进行提取保存在returnMat矩阵中，也就是特征矩阵
+        returnMat[index,:] = listFromLine[0:3]
+        # 根据文本内容进行分类1：不喜欢；2：一般；3：喜欢
+        if listFromLine[-1] == 'didntLike':
+            classLabelVector.append(1)
+        elif listFromLine[-1] == 'smallDoses':
+            classLabelVector.append(2)
+        elif listFromLine[-1] == 'largeDoses':
+            classLabelVector.append(3)
+        index += 1
+    # 返回标签列向量以及特征矩阵
+    return returnMat, classLabelVector
 #
 #
 # """
@@ -306,12 +294,12 @@ def classify0(inX, dataSet, labels, k):
 
 
 def main():
-    # # 获取程序运行时间
-    # start =time.clock()
-    # # 打开文件的名称
-    # filename = "datingTestSet.txt"
+    # 获取程序运行时间
+    start =time.clock()
+    # 打开文件的名称
+    filename = "/home/yincheng/Desktop/IML/kNN_Project1/datingTestSet.txt"
     # # 打开并处理数据
-    # datingDataMat, datingLabels = file2matrix(filename)
+    datingDataMat, datingLabels = file2matrix(filename)
     # # 训练集归一化
     # normDataset, ranges, minVals = autoNorm(datingDataMat)
     # datingClassTest()

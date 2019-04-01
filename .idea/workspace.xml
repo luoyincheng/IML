@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="681c2cca-668d-496a-87c2-4b4acfa8cd8f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kNN_Project1/kNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/kNN_Project1/kNN.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +15,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kNN_Project1/kNN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="647">
-              <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+            <state relative-caret-position="415">
+              <caret line="299" column="16" selection-start-line="299" selection-start-column="16" selection-end-line="299" selection-end-column="16" />
               <folding>
                 <element signature="e#214#225#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python3.6/dist-packages/numpy/lib/shape_base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1387">
+              <caret line="1154" column="4" selection-start-line="1154" selection-start-column="4" selection-end-line="1154" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -95,7 +104,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.kNN (1)">
+  <component name="RunManager" selected="Python.kNN">
     <configuration name="kNN (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="IML" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,9 +170,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.kNN" />
         <item itemvalue="Python.kNN (1)" />
         <item itemvalue="Python.knn" />
-        <item itemvalue="Python.kNN" />
       </list>
     </recent_temporary>
   </component>
@@ -182,21 +191,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="2560" height="1415" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="25" width="2534" height="1401" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27315727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27598566" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3267688" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32625785" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32970452" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.331761" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -304,15 +312,15 @@
     </entry>
     <entry file="file:///usr/local/lib/python3.6/dist-packages/numpy/lib/shape_base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
+        <state relative-caret-position="-1387">
           <caret line="1154" column="4" selection-start-line="1154" selection-start-column="4" selection-end-line="1154" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kNN_Project1/kNN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+        <state relative-caret-position="415">
+          <caret line="299" column="16" selection-start-line="299" selection-start-column="16" selection-end-line="299" selection-end-column="16" />
           <folding>
             <element signature="e#214#225#0" expanded="true" />
           </folding>
